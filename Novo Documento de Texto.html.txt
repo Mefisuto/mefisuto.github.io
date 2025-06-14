@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecnoFix - Assistência Técnica Especializada</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .review-card {
+            transition: all 0.3s ease;
+        }
+        
+        .review-card:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="bg-black text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-tools text-2xl mr-2"></i>
+                <h1 class="text-2xl font-bold"><span class="text-red-600">A.S.</span> <span class="text-white">Eletrônica</span></h1>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#home" class="hover:text-yellow-300 transition">Início</a></li>
+                    <li><a href="#services" class="hover:text-yellow-300 transition">Serviços</a></li>
+                    <li><a href="#about" class="hover:text-yellow-300 transition">Sobre</a></li>
+                    <li><a href="#reviews" class="hover:text-yellow-300 transition">Avaliações</a></li>
+                    <li><a href="#contact" class="hover:text-yellow-300 transition">Contato</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden text-xl" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-blue-700 w-full" id="mobile-menu">
+            <ul class="px-4 py-2">
+                <li class="py-2 border-b border-blue-600"><a href="#home" class="block">Início</a></li>
+                <li class="py-2 border-b border-blue-600"><a href="#services" class="block">Serviços</a></li>
+                <li class="py-2 border-b border-blue-600"><a href="#about" class="block">Sobre</a></li>
+                <li class="py-2 border-b border-blue-600"><a href="#reviews" class="block">Avaliações</a></li>
+                <li class="py-2"><a href="#contact" class="block">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Assistência Técnica <span class="text-yellow-300">Especializada</span></h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Conserto rápido e garantido de TVs, celulares, aparelhos de som, microondas e muito mais. Seu eletrônico em boas mãos!</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://wa.me/551156148699" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg flex items-center justify-center gap-2 transition">
+                    <i class="fab fa-whatsapp text-xl"></i> WhatsApp (11) 5614-8699
+                </a>
+                <a href="#contact" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition">
+                    Outros Contatos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Nossos <span class="text-red-600">Serviços</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Especializados no conserto de diversos equipamentos eletrônicos com qualidade e garantia.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300">
+                    <div class="text-red-600 mb-4">
+                        <i class="fas fa-tv text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Reparo de TVs</h3>
+                    <p class="text-gray-600">Consertamos TVs de todas as marcas e modelos, incluindo LED, LCD, Plasma e Smart TVs com peças originais.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-mobile-alt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Celulares</h3>
+                    <p class="text-gray-600">Troca de telas, baterias, conserto de placas, problemas com carregamento e muito mais para seu smartphone.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-music text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Aparelhos de Som</h3>
+                    <p class="text-gray-600">Reparo de caixas de som, amplificadores, receivers e sistemas de home theater com qualidade profissional.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-blender text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Microondas</h3>
+                    <p class="text-gray-600">Conserto de problemas como não aquecer, faíscas, falhas no painel e outros defeitos comuns em microondas.</p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-desktop text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Monitores</h3>
+                    <p class="text-gray-600">Reparo de monitores de computador com problemas de imagem, luz de fundo, conectores e mais.</p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-gamepad text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Outros Eletrônicos</h3>
+                    <p class="text-gray-600">Também consertamos videogames, notebooks, tablets, câmeras digitais e diversos outros aparelhos eletrônicos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="https://images.unsplash.com/photo-1581092918056-0c4e3a5c730e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Técnico trabalhando" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Sobre a <span class="text-red-600">A.S. Eletrônica</span></h2>
+                    <p class="text-gray-600 mb-4">Há mais de 15 anos no mercado, oferecendo soluções especializadas em conserto e manutenção de aparelhos eletroeletrônicos com excelência técnica e atendimento personalizado.</p>
+                    <p class="text-gray-600 mb-4">Nossa equipe é formada por técnicos especializados e certificados pelas principais marcas do mercado, garantindo que seu aparelho seja consertado com qualidade e durabilidade.</p>
+                    <p class="text-gray-600 mb-6">Trabalhamos com peças originais ou de alta qualidade equivalente, e todos os nossos serviços são cobertos por garantia documentada.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center bg-blue-50 px-4 py-2 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                            <span>Técnicos Certificados</span>
+                        </div>
+                        <div class="flex items-center bg-blue-50 px-4 py-2 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                            <span>Peças Originais</span>
+                        </div>
+                        <div class="flex items-center bg-blue-50 px-4 py-2 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                            <span>Garantia de Serviço</span>
+                        </div>
+                        <div class="flex items-center bg-blue-50 px-4 py-2 rounded-lg">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                            <span>Orçamento Grátis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">O que nossos <span class="text-red-600">clientes dizem</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Confira abaixo algumas avaliações de clientes satisfeitos com nosso serviço.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Review 1 -->
+                <div class="review-card bg-white rounded-lg shadow-md p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">Há 1 semana</span>
+                    </div>
+                    <p class="text-gray-700 mb-4">"Minha TV quebrou e a TecnoFix resolveu tudo rapidamente. O técnico foi muito profissional e explicou direitinho o problema. Super recomendo!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Cliente" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-bold">Carla Mendes</h4>
+                            <p class="text-sm text-gray-500">Conserto de TV Samsung</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Review 2 -->
+                <div class="review-card bg-white rounded-lg shadow-md p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">Há 3 semanas</span>
+                    </div>
+                    <p class="text-gray-700 mb-4">"Levei meu celular com problema na tela e foi consertado no mesmo dia. Ótimo atendimento, preço justo e ainda deram garantia. Voltarei sempre que precisar!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-bold">Roberto Santos</h4>
+                            <p class="text-sm text-gray-500">Troca de tela Xiaomi</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Review 3 -->
+                <div class="review-card bg-white rounded-lg shadow-md p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-sm text-gray-500">Há 1 mês</span>
+                    </div>
+                    <p class="text-gray-700 mb-4">"Meu microondas parou de funcionar e achei que teria que comprar outro. A TecnoFix diagnosticou o problema rápido, trocou a peça e deixou como novo. Paguei um valor bem abaixo do que custaria um aparelho novo."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-bold">Maria Oliveira</h4>
+                            <p class="text-sm text-gray-500">Conserto de Microondas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="#" id="google-review-btn" class="inline-flex items-center justify-center bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 px-6 border border-gray-300 rounded-lg shadow">
+                    <i class="fab fa-google text-red-500 mr-2"></i>
+                    Deixe sua avaliação no Google
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-black text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-2">Fale <span class="text-red-600">Conosco</span></h2>
+                <p class="max-w-2xl mx-auto">Entre em contato para tirar dúvidas, solicitar orçamentos ou agendar visitas técnicas.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-1/2 bg-blue-700 rounded-lg p-8 shadow-lg">
+                    <h3 class="text-xl font-bold mb-6">Informações de Contato</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-yellow-300 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Endereço</h4>
+                                <p>Av. Paulista, 1000 - Bela Vista, São Paulo - SP</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-phone-alt text-yellow-300 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Telefone</h4>
+                                <p>(11) 1234-5678</p>
+                                <p>(11) 9876-5432 (WhatsApp)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-yellow-300 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Email</h4>
+                                <p>contato@tecnofix.com.br</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-yellow-300 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Horário de Atendimento</h4>
+                                <p>Segunda a Sexta: 8h às 18h</p>
+                                <p>Sábado: 8h às 13h</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-4">Redes Sociais</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center hover:bg-blue-500 transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center hover:bg-blue-500 transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center hover:bg-blue-500 transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://wa.me/551156148699" class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center hover:bg-blue-500 transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 bg-white rounded-lg p-8 shadow-lg">
+                    <h3 class="text-xl font-bold mb-6 text-gray-800">Envie uma Mensagem</h3>
+                    <form id="contact-form">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 mb-2">Nome</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="phone" class="block text-gray-700 mb-2">Telefone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="service" class="block text-gray-700 mb-2">Serviço de Interesse</label>
+                            <select id="service" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800">
+                                <option value="">Selecione um serviço</option>
+                                <option value="tv">Reparo de TV</option>
+                                <option value="cell">Reparo de Celular</option>
+                                <option value="sound">Aparelhos de Som</option>
+                                <option value="microwave">Microondas</option>
+                                <option value="monitor">Monitores</option>
+                                <option value="other">Outros Eletrônicos</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 mb-2">Mensagem</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Perguntas <span class="text-blue-600">Frequentes</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Tire suas dúvidas sobre nossos serviços e procedimentos.</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="border rounded-lg overflow-hidden">
+                    <!-- FAQ Item 1 -->
+                    <div class="border-b">
+                        <button class="faq-btn w-full flex justify-between items-center p-4 hover:bg-gray-50 transition">
+                            <h3 class="text-left font-medium text-gray-800">Quanto tempo demora um conserto em média?</h3>
+                            <i class="fas fa-chevron-down text-blue-500 transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden px-4 pb-4 text-gray-600">
+                            <p>O tempo varia conforme o tipo de aparelho e a complexidade do problema. Consertos simples como troca de telas podem ser feitos no mesmo dia. Problemas mais complexos podem levar de 2 a 5 dias úteis. Sempre informamos o prazo estimado após a avaliação técnica.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="border-b">
+                        <button class="faq-btn w-full flex justify-between items-center p-4 hover:bg-gray-50 transition">
+                            <h3 class="text-left font-medium text-gray-800">Vocês dão garantia para os serviços realizados?</h3>
+                            <i class="fas fa-chevron-down text-blue-500 transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden px-4 pb-4 text-gray-600">
+                            <p>Sim, todos os nossos serviços têm garantia de 90 dias para mão de obra. Peças originais e equivalentes possuem garantia conforme determinação do fabricante (geralmente de 3 a 12 meses). A nota fiscal com as especificações de garantia é sempre fornecida.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="border-b">
+                        <button class="faq-btn w-full flex justify-between items-center p-4 hover:bg-gray-50 transition">
+                            <h3 class="text-left font-medium text-gray-800">Posso levar meu aparelho direto na oficina ou preciso agendar?</h3>
+                            <i class="fas fa-chevron-down text-blue-500 transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden px-4 pb-4 text-gray-600">
+                            <p>Você pode ir diretamente ao nosso laboratório durante o horário de atendimento. Porém, para evitar esperas, recomendamos que agende previamente pelo telefone ou WhatsApp. Para visitas técnicas em domicílio ou empresas, o agendamento é obrigatório.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="border-b">
+                        <button class="faq-btn w-full flex justify-between items-center p-4 hover:bg-gray-50 transition">
+                            <h3 class="text-left font-medium text-gray-800">Como sei se vale a pena consertar ou comprar um novo?</h3>
+                            <i class="fas fa-chevron-down text-blue-500 transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden px-4 pb-4 text-gray-600">
+                            <p>Fazemos uma avaliação gratuita do seu equipamento e informamos o diagnóstico e orçamento sem compromisso. Geralmente, se o custo do conserto for inferior a 40% do valor de um aparelho novo similar, compensa o reparo. Nossos técnicos podem orientá-lo sobre a melhor decisão.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 5 -->
+                    <div class="border-b">
+                        <button class="faq-btn w-full flex justify-between items-center p-4 hover:bg-gray-50 transition">
+                            <h3 class="text-left font-medium text-gray-800">Vocês trabalham com peças originais?</h3>
+                            <i class="fas fa-chevron-down text-blue-500 transition-transform"></i>
+                        </button>
+                        <div class="faq-content hidden px-4 pb-4 text-gray-600">
+                            <p>Sim, sempre que possível utilizamos peças originais do fabricante. Caso não estejam disponíveis ou tenham custo muito elevado, utilizamos peças equivalentes de qualidade reconhecida no mercado, sempre informando previamente ao cliente sobre a procedência das peças utilizadas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4 flex items-center">
+                        <i class="fas fa-tools text-red-600 mr-2"></i> A.S. Eletrônica
+                    </h3>
+                    <p class="mb-4">Especialistas em conserto de aparelhos eletrônicos há mais de 10 anos no mercado.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-red-600 transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-red-600 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-red-600 transition"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/551156148699" class="hover:text-red-600 transition"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Links Úteis</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-yellow-400 transition">Início</a></li>
+                        <li><a href="#services" class="hover:text-yellow-400 transition">Serviços</a></li>
+                        <li><a href="#about" class="hover:text-yellow-400 transition">Sobre Nós</a></li>
+                        <li><a href="#reviews" class="hover:text-yellow-400 transition">Avaliações</a></li>
+                        <li><a href="#contact" class="hover:text-yellow-400 transition">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Serviços</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-yellow-400 transition">Reparo de TV</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Conserto de Celular</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Aparelhos de Som</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Microondas</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Monitores</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Contato</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-yellow-400 mr-2"></i>
+                            Av. Paulista, 1000 - SP
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-yellow-400 mr-2"></i>
+                            (11) 1234-5678
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-mobile-alt text-yellow-400 mr-2"></i>
+                            (11) 5614-8699 (WhatsApp)
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-yellow-400 mr-2"></i>
+                            contato@tecnofix.com.br
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p>&copy; 2023 TecnoFix - Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-red-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-red-700 transition transform scale-0 opacity-0">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/551156148699" class="fixed bottom-6 left-6 bg-green-500 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center hover:bg-green-600 transition z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ Accordion
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                
+                btn.classList.toggle('active');
+                content.classList.toggle('hidden');
+                
+                if (content.classList.contains('hidden')) {
+                    icon.classList.remove('rotate-180');
+                } else {
+                    icon.classList.add('rotate-180');
+                }
+            });
+        });
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('scale-0', 'opacity-0');
+            } else {
+                backToTopBtn.classList.add('scale-0', 'opacity-0');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Google Review Button
+        const googleReviewBtn = document.getElementById('google-review-btn');
+        
+        googleReviewBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('Obrigado por querer nos avaliar! Você será redirecionado para nossa página no Google.');
+            // Aqui você substituiria pelo link real da sua página no Google
+            // window.open('https://www.google.com/search?...');
+        });
+
+        // Contact Form Submission
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
