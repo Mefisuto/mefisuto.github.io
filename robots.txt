@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://aseletronica.com.br/sitemap.xml
+Sitemap: https://mefisuto.github.io/sitemap.xml
