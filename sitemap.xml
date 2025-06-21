@@ -1,10 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mefisuto.github.io/</loc>
-    <lastmod>2025-06-18</lastmod> <!-- Atualize com a data de hoje -->
+    <loc>https://www.aseletronica.com.br/</loc>
+    <lastmod>2025-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-  <!-- Adicione outras URLs importantes aqui -->
+  <!-- Adicione outras URLs do seu site aqui -->
+  <!-- Exemplo: -->
+  <url>
+    <loc>https://www.aseletronica.com.br/contato</loc>
+    <lastmod>2025-06-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
